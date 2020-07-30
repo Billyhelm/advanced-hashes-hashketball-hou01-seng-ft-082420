@@ -199,5 +199,10 @@ end
 def most_points_scored
   game_hash.each do |(k,v), place|
     place[:players].each do |players|
-      mvp = players[:points].max{|a,b| 
+      mvp = players[:points].max
+      binding.pry
+    end 
+  end 
+  p mvp
 end 
+most_points_scored
