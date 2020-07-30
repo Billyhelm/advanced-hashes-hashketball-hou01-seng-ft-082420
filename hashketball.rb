@@ -182,4 +182,15 @@ def player_stats(name)
   end   
 end 
 
-p player_stats("Alan Anderson")
+def big_shoe_rebounds
+  largest_shoe = 0 
+  game_hash.each do |(k,v), place|
+    place[:players].find do |players|
+    if players[:shoe] > largest_shoe
+      largest_shoe = players[:shoe]
+    end 
+  end 
+  p largest_shoe
+end 
+
+big_shoe_rebounds
