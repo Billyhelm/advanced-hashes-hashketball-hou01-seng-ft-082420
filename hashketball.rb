@@ -175,7 +175,7 @@ end
 def player_stats(name)
   game_hash.each do |(k,v), place|
     place[:players].find do |players|
-      if players[:player_name] == player
+      if players[:player_name] == name
         return players
       end 
     end 
