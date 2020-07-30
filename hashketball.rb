@@ -197,5 +197,7 @@ rebounds
 end 
 
 def most_points_scored
-  
+  game_hash.each do |(k,v), place|
+    place[:players].each do |players|
+      mvp = players[:points].max
 end 
