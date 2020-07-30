@@ -136,7 +136,7 @@ def num_points_scored(player)
   end 
 end 
 
-def shoe_size
+def shoe_size(player)
   game_hash.each do |(k,v), place|
     place[:players].find do |players|
       if players[:player_name] == player
