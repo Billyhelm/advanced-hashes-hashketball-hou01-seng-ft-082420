@@ -159,3 +159,5 @@ def team_names
   game_hash.each{|(k,v), place| names_array.push(place[:team_name])}
   binding.pry
 end 
+
+team_names
