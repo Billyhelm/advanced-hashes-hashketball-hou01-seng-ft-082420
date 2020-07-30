@@ -136,4 +136,12 @@ def num_points_scored(player)
   end 
 end 
 
-num_points_scored("Ben Gordon")
+def shoe_size
+  game_hash.each do |(k,v), place|
+    place[:players].find do |players|
+      if players[:player_name] == player
+        return players[:shoe_size]
+      end 
+    end 
+  end
+end 
