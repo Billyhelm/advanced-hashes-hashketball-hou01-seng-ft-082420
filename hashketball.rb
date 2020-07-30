@@ -189,7 +189,7 @@ def big_shoe_rebounds
     if players[:shoe] > largest_shoe
       largest_shoe = players[:shoe]
     end 
-    print_largest_shoe
+    print largest_shoe
     end
    
   end 
