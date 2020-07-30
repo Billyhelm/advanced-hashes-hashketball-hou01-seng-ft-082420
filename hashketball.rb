@@ -191,13 +191,13 @@ def big_shoe_rebounds
       largest_shoe = players[:shoe]
       rebounds = players[:rebounds]
     end 
-    #print largest_shoe
-    #print rebounds
+    p largest_shoe
+    p rebounds
     end
    
   end 
-  print largest_shoe
-  print rebounds
+  p largest_shoe
+  p rebounds
 end 
 
 big_shoe_rebounds
