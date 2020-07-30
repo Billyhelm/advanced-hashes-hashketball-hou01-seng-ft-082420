@@ -130,11 +130,10 @@ def num_points_scored(player)
   game_hash.each do |(k,v), place|
     place[:players].find do |players|
       if players[:player_name] == player
-        binding.pry
         p players[:points]
       end 
     end 
   end 
 end 
 
-num_points_scored("Alan Anderson")
+num_points_scored("Ben Gordon")
