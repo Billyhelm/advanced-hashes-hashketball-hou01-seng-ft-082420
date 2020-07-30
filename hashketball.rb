@@ -131,7 +131,7 @@ def num_points_scored(player)
     place[:players].find do |players|
       if players[:player_name] == player
         binding.pry
-        return players[:points]
+        p players[:points]
       end 
     end 
   end 
