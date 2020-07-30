@@ -166,11 +166,12 @@ def player_numbers(team)
     if place[:team_name] == team
       place[:players].each do |playa|
         jersey_numbers.push(playa[:number])
-        #binding.pry
      end 
     end 
   end
   p jersey_numbers
 end 
 
-player_numbers("Brooklyn Nets")
+def player_stats(name)
+  
+end 
