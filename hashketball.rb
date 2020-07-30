@@ -172,3 +172,5 @@ def player_numbers(team)
   end
   jersey_numbers
 end 
+
+player_numbers("Brooklyn Nets")
