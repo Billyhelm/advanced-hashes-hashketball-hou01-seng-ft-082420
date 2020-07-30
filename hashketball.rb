@@ -156,7 +156,6 @@ end
 
 def team_names 
   names_array=[]
-  p game_hash.each{|(k,v), place| names_array.push(place[:team_name])}
+  game_hash.each{|(k,v), place| names_array.push(place[:team_name])}
+  binding.pry
 end 
-
-team_names
