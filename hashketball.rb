@@ -207,6 +207,5 @@ def most_points_scored
     end 
     end
   end 
-  p mvp
+  mvp
 end 
-most_points_scored
