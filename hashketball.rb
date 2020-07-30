@@ -186,13 +186,12 @@ def big_shoe_rebounds
   largest_shoe = 0 
   game_hash.each do |(k,v), place|
     place[:players].find do |players|
-    if players[:shoe] >= largest_shoe
+    if players[:shoe] > largest_shoe
       largest_shoe = players[:shoe]
+      p largest_shoe
     end 
     end
-    p largest_shoe
   end 
-  p largest_shoe
 end 
 
 big_shoe_rebounds
