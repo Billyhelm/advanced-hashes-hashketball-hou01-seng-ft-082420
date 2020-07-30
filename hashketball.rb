@@ -193,7 +193,7 @@ def big_shoe_rebounds
     end
    
   end 
-  print largest_shoe
+  p largest_shoe
 end 
 
 big_shoe_rebounds
