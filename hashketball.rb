@@ -188,7 +188,8 @@ def big_shoe_rebounds
     place[:players].find do |players|
     if players[:shoe] > largest_shoe
       largest_shoe = players[:shoe]
-    end binding.pry 
+    end 
+    binding.pry 
     end
    
   end 
