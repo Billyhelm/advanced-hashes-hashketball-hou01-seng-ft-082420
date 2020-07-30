@@ -1,4 +1,4 @@
-# Write your code below game_hash
+require 'pry'
 def game_hash
   {
     home: {
@@ -126,4 +126,86 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored(player)
+  game_hash.each do |(k,v), place|
+    place[:players].find do |players|
+      if players[:player_name] == player
+        return players[:points]
+      end 
+    end 
+  end 
+end 
+
+def shoe_size(player)
+  game_hash.each do |(k,v), place|
+    place[:players].find do |players|
+      if players[:player_name] == player
+        return players[:shoe]
+      end 
+    end 
+  end
+end 
+
+def team_colors(name)
+  game_hash.each do |(k,v), place|
+    if place[:team_name] == name
+      return place[:colors]
+    end 
+  end 
+end 
+
+def team_names 
+  names_array=[]
+  game_hash.each{|(k,v), place| names_array.push(place[:team_name])}
+  names_array
+end 
+
+def player_numbers(team)
+  jersey_numbers = []
+  game_hash.each do |(k,v), place|
+    if place[:team_name] == team
+      place[:players].each do |playa|
+        jersey_numbers.push(playa[:number])
+     end 
+    end 
+  end
+  p jersey_numbers
+end 
+
+def player_stats(name)
+  game_hash.each do |(k,v), place|
+    place[:players].find do |players|
+      if players[:player_name] == name
+        return players
+      end 
+    end 
+  end   
+end 
+
+def big_shoe_rebounds
+  largest_shoe = 0 
+  rebounds = 0
+  game_hash.each do |(k,v), place|
+    place[:players].each do |players|
+    if players[:shoe] > largest_shoe
+      largest_shoe = players[:shoe]
+      rebounds = players[:rebounds]
+    end 
+    end
+  end 
+rebounds
+end 
+
+def most_points_scored
+  most_points = 0 
+  mvp = ''
+  game_hash.each do |(k,v), place|
+    place[:players].each do |players|
+    if players[:points] > most_points
+      most_points = players[:points]
+      mvp = players[:player_name]
+    end 
+    end
+  end 
+  mvp
+end 
