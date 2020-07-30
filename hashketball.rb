@@ -163,7 +163,7 @@ end
 def player_numbers(team)
   jersey_numbers = []
   game_hash.each do |(k,v), place|
-    if place[:team_name] = team
+    if place[:team_name] == team
       place[:players].each do |playa|
         jersey_numbers.push(playa[:number])
         #binding.pry
