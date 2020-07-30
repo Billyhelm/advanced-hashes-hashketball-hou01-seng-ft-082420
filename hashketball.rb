@@ -197,11 +197,15 @@ rebounds
 end 
 
 def most_points_scored
+  most_points = 0 
+  mvp = ''
   game_hash.each do |(k,v), place|
     place[:players].each do |players|
-      mvp = players[:points].
-      #binding.pry
+    if players[:points] > most_points
+      most_points = players[:points]
+      mvp = players[:player_name]
     end 
+    end
   end 
   p mvp
 end 
