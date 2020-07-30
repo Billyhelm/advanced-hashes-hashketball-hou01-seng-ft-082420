@@ -170,7 +170,7 @@ def player_numbers(team)
      end 
     end 
   end
-  jersey_numbers
+  p jersey_numbers
 end 
 
 player_numbers("Brooklyn Nets")
