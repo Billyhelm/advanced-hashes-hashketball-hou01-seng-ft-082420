@@ -153,3 +153,8 @@ def team_colors(name)
     end 
   end 
 end 
+
+def team_names 
+  names_array=[]
+  game_hash.each{|(k,v), place| names_array.push(place[:team_name])}
+end 
